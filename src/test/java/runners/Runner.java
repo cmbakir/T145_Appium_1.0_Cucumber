@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",},
         features = "src/test/resources/Features",
         glue = "stepDefinitions",
-        tags = "@apk",
-        dryRun = true
+        tags = "@browser",
+        dryRun = false
 )
 
 public class Runner {

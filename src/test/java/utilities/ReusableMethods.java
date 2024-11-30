@@ -52,6 +52,17 @@ public class ReusableMethods {
         return target;
     }
 
+    public static void ekranKaydirmaMethodu(int xbaslangic, int ybaslangic, int beklemesuresi, int xbitis, int ybitis) throws InterruptedException {
+
+        TouchAction action=new TouchAction<>(Driver.getAndroidDriver());
+        action.press(PointOption.point(xbaslangic,ybaslangic))
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(beklemesuresi)))
+                .moveTo(PointOption.point(xbitis,ybitis))
+                .release()
+                .perform();
+
+    }
+
 
 
 
